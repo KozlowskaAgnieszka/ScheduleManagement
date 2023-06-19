@@ -1,0 +1,17 @@
+<%- include('includes/head.ejs') %>
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+   
+    <h1><%= user.firstname %> <%= user.lastname %></h1>
+    <h3>User Id: <%= user.user_id %></h3>
+      <div class="grid">
+        <% for (let schedule of schedules) { %>
+          <ul class="card">
+            <h2>Day: <%= schedule.day %></h2>
+            <li><span>Start at:</span> <%= schedule.start_at %></li>
+            <li><span>End at:</span> <%= schedule.end_at %></li>
+        </ul>
+        <% } %>
+      </div>
+<%- include('includes/end.ejs') %>

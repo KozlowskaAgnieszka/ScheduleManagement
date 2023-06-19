@@ -1,0 +1,13 @@
+<%- include('includes/head.ejs') %>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <div class="grid">
+      <% for (let user of users) { %>
+        <ul class="card">
+          <h2><a href="/users/<%= user.user_id %>"><%= user.firstname %> <%= user.lastname %></a></h2>
+          <li><span>e-mail:</span> <%= user.email %></li>
+          <li><a href="/users/<%= user.user_id %>/schedules"><span>Check schedules</span></a></li>
+        </ul>
+      <% } %>
+    </div>
+<%- include('includes/end.ejs') %>

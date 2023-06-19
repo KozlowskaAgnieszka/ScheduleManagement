@@ -1,0 +1,11 @@
+<%- include('includes/head.ejs') %>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <ul class="card user-card">
+      <h2><%= firstname %> <%= lastname %></h2>
+      <li><span>First name:</span> <%= firstname %></li>
+      <li><span>Last name:</span> <%= lastname %></li>
+      <li><span>e-mail:</span> <%= email %></li>
+      <li><a href='./<%= userId %>/schedules'><span>Check schedules</span></a></li>
+    </ul>
+<%- include('includes/end.ejs') %>

@@ -1,0 +1,14 @@
+    <header class="main-header">
+    <nav class="main-header__nav">
+      <ul class="main-header__item-list">
+        <li class="main-header__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Home</a></li>
+        <li class="main-header__item"><a class="<%= path === '/users' ? 'active' : '' %>" href="/users">Users</a></li>
+        <li class="main-header__item"><a class="<%= path === '/schedules' ? 'active' : '' %>" href="/schedules">Schedules</a></li>
+      </ul>
+      <h2><a href="/">>> Schedule website <<</a></h2>
+      <ul class="main-header__item-list">
+        <li class="main-header__item"><a class="<%= path === '/users/new' ? 'active' : '' %>"href="/users/new">New user</a></li>
+        <li class="main-header__item"><a class="<%= path === '/schedules/new' ? 'active' : '' %>"href="/schedules/new">New schedule</a></li>
+      </ul>
+    </nav>
+  </header>

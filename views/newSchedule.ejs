@@ -1,0 +1,56 @@
+<%- include('includes/head.ejs') %>
+  </head>
+  <body>
+    <%- include('includes/navigation.ejs') %>
+    <main>
+      <h1>Add Schedule</h1>
+      <form class="form" action="new" method="POST">
+        <div class="form-control">
+          <label for="user_id">User</label>
+          <select name="user_id" id="user_id">
+            <% for (let user of usersList) { %>
+              <option value="<%= user[0] %>"><%= user[1] %></option>
+            <% } %>
+          </select>
+
+          <label for="day">Day: </label>
+          <select name="day" id="day">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="7">Sunday</option>
+          </select>
+          
+          <label for="start_at">Start at: </label>
+          <div class="input-control">
+            <input type="number" name="start_at" id="start_at" min="1" max="12" placeholder="1 - 12" required>
+            <div>
+              <input type="radio" name="start_at" id="AM" value="AM" checked="checked">
+              <label for="AM">AM</label>
+            </div>
+            <div>
+              <input type="radio" name="start_at" id="PM" value="PM">
+              <label for="PM">PM</label>
+            </div>
+          </div>
+
+          <label for="end_at">End at: </label>
+          <div class="input-control">
+            <input type="number" name="end_at" id="end_at" min="1" max="12" placeholder="1 - 12" required>
+            <div>
+              <input class="form-radio" type="radio" name="end_at" id="AM" value="AM" checked="checked">
+              <label class="form-radio" for="AM">AM</label>
+            </div>
+            <div>
+              <input class="form-radio" type="radio" name="end_at" id="PM" value="PM">
+              <label class="form-radio" for="PM">PM</label>
+            </div>
+          </div>
+        </div>
+        <button class="btn" type="submit">Add schedule</button>
+      </form>
+    </main>
+<%- include('includes/end.ejs') %>
