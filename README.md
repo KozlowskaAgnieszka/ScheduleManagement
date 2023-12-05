@@ -1,6 +1,5 @@
-# ScheduleManagement
+## ScheduleManagement
 
-A simple timesheet management system
+A no-fuss system to manage timesheets
 
-The project used:
-- MySQL
+I've whipped up this nifty project using a powerful combo of **MySQL, JavaScript, EJS, and Express.js**. 
